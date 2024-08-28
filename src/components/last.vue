@@ -1,0 +1,51 @@
+<script setup>
+import { IconCaretDown , IconArrowUpRight } from '@tabler/icons-vue';
+import { DropdownMenu, DropdownMenuTrigger, DropdownMenuItem, DropdownMenuContent } from './ui/dropdown-menu';
+import { Button } from './ui/button';
+import { ScrollArea, ScrollBar  } from '@/components/ui/scroll-area'
+import { ref, onMounted, onUnmounted } from 'vue';
+import { Smoothie } from "vue-smoothie";
+import { Accordion,AccordionItem, AccordionContent, AccordionTrigger } from './ui/accordion';
+
+
+const defaultValue = 'item-1'
+
+const accordionItems = [
+  { value: 'item-1', title: 'Is it accessible?', content: 'Yes. It adheres to the WAI-ARIA design pattern.' },
+  { value: 'item-2', title: 'Is it unstyled?', content: 'Yes. It\'s unstyled by default, giving you freedom over the look and feel.' },
+  { value: 'item-3', title: 'Can it be animated?', content: 'Yes! You can use the transition prop to configure the animation.' },
+]
+</script>
+
+<template>
+  <div class="footer px-10 w-screen h-[300px] bg-[#d9d9d985] flex flex-col z-10 mt-0 backdrop-blur-3xl">
+    <div class="content flex flex-col h-full">
+      <div class="row1 flex h-20 w-full place-items-center">
+        <img src="../assets/habeshaLiveicon.svg" alt="" class="w-10">
+        <h1 class=" text-white ml-5 text-[20px] font-bold">Habesha Live</h1>
+        <img src="../assets/khubpoint.svg" alt="" class="ml-auto w-[130px]">
+      </div>
+      <div class="row2 flex h-20 w-full place-items-center flex-col mt-auto">
+        <div class="subrow1 w-full h-10 flex">
+          <h1 class="ml-auto text-sm text-white cursor-pointer">Back To Top</h1>
+        </div>
+        <img src="../assets/line-long.svg" alt="">
+        <div class="subrow2 w-full h-10 flex place-items-center [&>h1]:text-white">
+          <h1>© all rights reserved</h1>
+          <div class="separator w-[2px] h-[70%] bg-white mx-5"></div>
+          <h1>Terms of Service</h1>
+          <div class="separator w-[2px] h-[70%] bg-white mx-5"></div>
+          <h1>Privacy Policy</h1>
+          <h1 class="ml-auto">@2024.A.A</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<style scoped>
+  .footer{
+    background: rgb(255,135,221);
+    background: linear-gradient(135deg, rgba(255,135,221,1) 5%, rgba(255,77,205,1) 47%, rgba(140,5,194,1) 89%, rgba(132,0,193,1) 95%);
+  }
+</style>
