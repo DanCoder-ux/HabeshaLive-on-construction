@@ -16,7 +16,7 @@ import { livepage } from './components/state';
 </script>
 
 <template>
-  <Smoothie class="container p-0" :Weight="0.10" id="smoothi">
+  <Smoothie class="cont p-0" :Weight="0.10" id="smoothi">
     <LivePage />
     <scrolldownind />
     <login />
@@ -33,7 +33,7 @@ import { livepage } from './components/state';
 </template>
 
 <style scoped>
-.container {
+.cont {
   width: 100vw;
   height: 100vh;
   overflow-y: hidden;
