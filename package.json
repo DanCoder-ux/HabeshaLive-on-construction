@@ -21,6 +21,7 @@
     "tailwindcss-animate": "^1.0.7",
     "vee-validate": "^4.13.2",
     "vue": "^3.4.29",
+    "vue-smoothie": "^1.2.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {

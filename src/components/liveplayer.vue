@@ -11,7 +11,7 @@ import { IconBell } from '@tabler/icons-vue';
 import { ScrollArea } from './ui/scroll-area';
 import { ref } from 'vue';
 import { onMounted } from 'vue';
-import { gsap } from 'gsap';
+import { Smoothie } from "vue-smoothie";
 
 
 const messages = ref([
