@@ -27,10 +27,11 @@ function togglePassword(){
 function unLogin(){
   if(terms.value){
     toggleterms(false);
+    document.getElementById("smoothi").style.overflowY = "hidden";
   }else{
     canRegister.value = !canRegister.value;
   }
-  if(canLogin.value){
+  if(canRegister.value){
         document.getElementById("smoothi").style.overflowY = "hidden";
     }else{
         document.getElementById("smoothi").style.overflowY = "scroll";
@@ -50,17 +51,19 @@ function toggleterms(open = true){
         terms.value = true;
         const sec1 = document.getElementById('sec1');
         sec1.classList.add("w-full");
+        document.getElementById("smoothi").style.overflowY = "hidden";
     } else {
         terms.value = false;
         const sec1 = document.getElementById('sec1');
         sec1.classList.remove("w-full");
         sec1.classList.add("w-1/2");
+        document.getElementById("smoothi").style.overflowY = "hidden";
     }
 }
 </script>
 
 <template>
-  <div class=" p-10 w-screen h-screen bg-[#ffffff] flex flex-col justify-center mt-0 backdrop-blur-3xl absolute z-10" v-show="canRegister">
+  <div class=" p-10 w-screen h-screen bg-[#ffffff] flex flex-col justify-center mt-0 backdrop-blur-3xl absolute z-20" v-show="canRegister">
     <div class="login w-full h-full bg-gray-100 rounded-2xl flex p-3 gap-3 shadow-2xl">
         <div id="sec1" class="sec1 w-1/2 gradient-background rounded-2xl p-20 flex flex-col pt-10 pb-10" style="transition: 0.7s ease-in-out">
             <Button variant="primary" size="icon" @click="unLogin">

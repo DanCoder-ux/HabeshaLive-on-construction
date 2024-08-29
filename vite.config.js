@@ -11,11 +11,6 @@ export default defineConfig({
   optimizeDeps: {
     include: ['vue-smoothie']
   },
-  build: {
-    rollupOptions: {
-      external: ['vue-smoothie']
-    }
-  },
   css: {
     postcss: {
       plugins: [tailwind(), autoprefixer()],

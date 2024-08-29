@@ -16,7 +16,7 @@ import {
 import { IconEyeQuestion, IconArrowLeft,IconEye   } from '@tabler/icons-vue';
 import { Input } from './ui/input';
 import { Checkbox } from '@/components/ui/checkbox'
-import { canRegister, canLogin,terms } from './state';
+import { canRegister, canLogin,terms, livepage } from './state';
 
 const input_ps_type = ref('password');
 
@@ -65,10 +65,20 @@ function toggleterms(open = true){
         sec1.classList.add("w-1/2");
     }
 }
+function showlivepage(){
+    livepage.value = !livepage.value;
+    if(livepage.value){
+        document.getElementById("smoothi").style.overflowY = "hidden";
+    }
+}
+
+function validateLoginForm(){
+  showlivepage();
+}
 </script>
 
 <template>
-  <div class=" p-10 w-screen h-screen bg-[#ffffff] flex flex-col justify-center mt-0 backdrop-blur-3xl absolute z-10" v-show="canLogin">
+  <div class=" p-10 w-screen h-screen bg-[#ffffff] flex flex-col justify-center mt-0 backdrop-blur-3xl absolute z-20" v-show="canLogin">
     <div class="login w-full h-full bg-gray-100 rounded-2xl flex p-3 gap-3 shadow-2xl ">
         <div id="sec1log" class="sec1 w-1/2 gradient-background rounded-2xl p-20 flex flex-col pt-10 pb-10 " style="transition: 0.7s ease-in-out">
             <Button variant="primary" size="icon" @click="unLogin">
@@ -83,7 +93,6 @@ function toggleterms(open = true){
                 </CardContent>
             </Card>
             <div class="more mt-auto flex w-full [&>*]:cursor-pointer">
-                <h1 class="text-white underline" @click="toggleterms">Terms of use</h1>
                 <h1 class="text-white ml-auto">Privacy Policy</h1>
             </div>
         </div>
@@ -109,7 +118,7 @@ function toggleterms(open = true){
                   Remember me
                 </label>
               </div>
-            <Button class="w-full h-12 gradient-background text-lg text-white mt-3 hover:text-white hover:shadow-xl transition-all" variant="outline">Login</Button>
+            <Button class="w-full h-12 gradient-background text-lg text-white mt-3 hover:text-white hover:shadow-xl transition-all" variant="outline" @click="validateLoginForm">Login</Button>
             <h1 class="w-full text-center mt-3" style="font-family: 'Roboto';">Dont have an account <Span @click="register" class="text-[#e22abf] cursor-pointer">Get started</Span></h1>
         </div>
     </div>

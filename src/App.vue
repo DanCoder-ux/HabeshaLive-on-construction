@@ -11,11 +11,13 @@ import follower from './components/follower.vue';
 import Register from './components/Register.vue';
 import login from './components/login.vue';
 import scrolldownind from './components/scrolldownind.vue';
-
+import LivePage from './components/LivePage.vue';
+import { livepage } from './components/state';
 </script>
 
 <template>
   <Smoothie class="container p-0" :Weight="0.10" id="smoothi">
+    <LivePage />
     <scrolldownind />
     <login />
     <Register />
