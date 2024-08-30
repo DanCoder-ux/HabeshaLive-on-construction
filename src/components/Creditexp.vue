@@ -18,7 +18,7 @@ import { Smoothie } from "vue-smoothie";
             <img src="../assets/arrow_to_left_short.svg" alt="" class="mt-4">
             <p class="text-lg mt-5 w-96" style="font-family:'Roboto'">Watch at anytime you see fit, with your credits you can watch streams without paying for every single one.</p>
             <div class="btns h-16 flex place-items-center gap-1">
-                <Button class="trybtn font-bold w-32 hover:w-36 transition-all">Purchase Credit</Button>
+                <Button id="purchasecredit" class="trybtn font-bold w-32 hover:w-36 transition-all">Purchase Credit</Button>
                 <Button class="go hover:rounded-xl transition-all" size="icon">
                     <IconArrowUpRight stroke={5} />
                 </Button>

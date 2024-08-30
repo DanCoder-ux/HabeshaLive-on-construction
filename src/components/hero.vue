@@ -11,6 +11,7 @@ import { Button } from './ui/button';
 import blob from './blob.vue';
 import gsap from 'gsap';
 import { Vue3Spline } from 'vue3-spline'
+import scrolldownind from './scrolldownind.vue';
 
 const easingOptions = ["power1.out", "power2.out", "power3.out", "power4.out"];
 const durationOptions = [0.4, 0.5, 0.8, 1];
@@ -51,20 +52,20 @@ function splitText(el) {
 <template>
   <div class=" w-screen bg-[#d9d9d985] flex flex-col justify-center backdrop-blur-3xl z-10" style="height: calc(100vh );">
     <div class="horst flex w-full h-[82%] place-items-center">
-      <div class="texts px-10 w-[1000px] mt-[50px]">
+      <div class="texts px-10 w-[1800px] mt-[100px]">
         <Transition appear @before-enter="fade_to_right_before" @enter="fade_to_right_after">
           <h2 class="font-bold text-lg fade_up_slower" style="font-family:'Roboto'">Get started with a Bonus</h2>
         </Transition>
         <Transition appear @before-enter="fade_to_right_before" @enter="fade_to_right_after">
-          <h1 class="text-[90px] font-[900] fade_up" style="font-family: 'Roboto'; line-height: 80px;">
+          <h1 class="text-[75px] font-[800] fade_up" style="font-family: 'Onest'; line-height: 70px;">
               Where Teachers and Students <Span class="highlightable fade_up_slower">Connect</Span> in Real Time.
           </h1>
         </Transition>
         <Transition appear @before-enter="fade_to_right_before" @enter="fade_to_right_after">
-          <h3 class="font-bold text-lg fade_up" style="font-family:'Roboto'">Our Goal is</h3>
+          <h3 class="font-bold text-lg fade_up" style="font-family:'Roboto'">Our Goal is to</h3>
         </Transition>
         <Transition appear @before-enter="fade_to_right_before" @enter="fade_to_right_after">
-          <h4 class="fade_up" style="font-family:'Roboto'">Expanding to the unchartered territories in search of briliance </h4>
+          <h4 class="fade_up" style="font-family:'Roboto'">Expand to the unchartered territories in search of briliance </h4>
         </Transition>
         <div class="btns h-16 flex place-items-center gap-1 fade_up">
             <Button id="trybtn" class="trybtn font-bold w-28 hover:w-32 transition-all">Try for free</Button>
@@ -74,7 +75,7 @@ function splitText(el) {
         </div>
     
       </div>
-      <div class="3d w-[30%] h-[95%] mt-[100px] mr-[150px]">
+      <div class="3d w-[50%] h-[95%] mt-[100px]">
         <Vue3Spline
         class="w-full h-full"
         :scene="{
@@ -82,7 +83,7 @@ function splitText(el) {
         }"
       />
       </div>
-      
+      <scrolldownind />
     </div>
     
     <div class="socials h-20 w-80 px-10 mt-auto fade_up_slower">

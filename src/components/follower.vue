@@ -6,7 +6,7 @@ const targetX = ref(0);
 const targetY = ref(0);
 const currentX = ref(0);
 const currentY = ref(0);
-const buttonsid = ref(["trybtn", "soc-1", "soc-2", "soc-3", "soc-4"]);
+const buttonsid = ref(["trybtn", "purchasecredit", "", "", ""]);
 const blurValue = ref(0);
 let blurAnimationFrame = null;
 
@@ -129,5 +129,7 @@ onUnmounted(() => {
 #follower {
   transition: transform 0.5s ease-in-out;
   transform: translate(-50%, -50%);
+   overflow: hidden;
 }
+
 </style>

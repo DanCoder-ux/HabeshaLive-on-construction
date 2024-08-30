@@ -13,12 +13,15 @@ import login from './components/login.vue';
 import scrolldownind from './components/scrolldownind.vue';
 import LivePage from './components/LivePage.vue';
 import { livepage } from './components/state';
+import buycredit from './components/buycredit.vue';
+import habeshachat from './components/habeshachat.vue';
 </script>
 
 <template>
   <Smoothie class="cont p-0" :Weight="0.10" id="smoothi">
+    <habeshachat />
+    <buycredit />
     <LivePage />
-    <scrolldownind />
     <login />
     <Register />
     <follower />

@@ -69,16 +69,16 @@ function toggleterms(open = true){
             <Button variant="primary" size="icon" @click="unLogin">
                 <IconArrowLeft stroke={2} color="white"/>
             </Button>
-            <h1 class="mt-5 text-white flex place-items-center text-[50px] font-[800]" style="font-family:'Roboto'; line-height: 50px;">Welcome To Habesha live</h1>
-            <h3 class="text-white mt-3">wlecome back to your habesha live account sign back in and continue your joureny</h3>
+            <h1 class="mt-5 text-white flex place-items-center text-[50px] font-[800]" style="font-family:'Onest'; line-height: 50px;">Welcome To Habesha live</h1>
+            <h3 class="text-white mt-3" style="font-family: 'Onest', sans-serif;">welcome back to your habesha live account sign back in and continue your joureny</h3>
             <Card v-show="!terms" class="w-48 h-16 mt-2 bg-[#ffffff6b] backdrop-blur-3xl border-none flex place-items-center justify-center cursor-pointer hover:scale-[0.95] transition-all">
                 <CardContent class="flex place-items-center justify-start p-2 gap-3 ">
                         <IconEyeQuestion stroke={2} color="white" class="w-14 h-14"/>
-                    <h1 class="flex place-items-center text-sm text-white">Want to see where your data goes</h1>
+                    <h1 class="flex place-items-center text-sm text-white" style="font-family: 'Onest', sans-serif;">Want to see where your data goes</h1>
                 </CardContent>
             </Card>
             <ScrollArea class="w-full h-1/2 mt-5" v-show="terms">
-              <p class="text-white" style="font-family: 'Roboto'">
+              <p class="text-white" style="font-family: 'Onest'">
                 <strong>Terms of Use:</strong><br><br>
                 
                 <strong>1. Eligibility</strong><br><br>
@@ -148,15 +148,14 @@ function toggleterms(open = true){
                 
                 If you wish to terminate your account, you may do so by logging into your account and following the instructions on the Website. Upon any termination, discontinuation, or cancellation of your account, the following provisions of these Terms will survive: Intellectual Property, User Identity Verification, User Submissions, Content on the Website, and Account Termination Policy.<br><br>
                 </p>
-                
             </ScrollArea>
             <div class="more mt-auto flex w-full [&>*]:cursor-pointer">
-                <h1 class="text-white underline"  @click="toggleterms(true)">Terms of use</h1>
-                <h1 class="text-white ml-auto">Privacy Policy</h1>
+                <h1 class="text-white underline"  @click="toggleterms(true)" style="font-family: 'Onest', sans-serif;">Terms of use</h1>
+                <h1 class="text-white ml-auto" style="font-family: 'Onest', sans-serif;">Privacy Policy</h1>
             </div>
         </div>
         <div class="sec2 w-1/2 h-full flex-col p-20 py-5 gap-6">
-            <h1 class="text-[50px] font-[600]">Register</h1>
+            <h1 class="text-[50px] font-[600]" style="font-family: 'Onest', sans-serif;">Register</h1>
             <Label>First and Last name</Label>
             <div class="flex gap-2 mt-1">
                 <Input placeholder="First Name" class="w-full h-12"/>
