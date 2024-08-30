@@ -27,7 +27,7 @@ const accordionItems = [
     <h1 class=" w-[1000px] text-[130px] font-bold h-22" style="line-height: 110px;">FAQ</h1>
     <Accordion type="single" class="w-[1000px] mt-12" collapsible :default-value="defaultValue">
         <AccordionItem v-for="item in accordionItems" :key="item.value" :value="item.value">
-          <AccordionTrigger class=" bg-transparent border-b border-black px-5 hover:no-underline hover:bg-gray-200">{{ item.title }}</AccordionTrigger>
+          <AccordionTrigger class=" bg-transparent border-b border-gray-400 px-5 hover:no-underline hover:bg-gray-300">{{ item.title }}</AccordionTrigger>
           <AccordionContent class=" p-5 font-semibold">
             {{ item.content }}
           </AccordionContent>

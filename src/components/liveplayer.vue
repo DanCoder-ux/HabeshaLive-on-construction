@@ -17,7 +17,7 @@ import { Smoothie } from "vue-smoothie";
 const messages = ref([
     {
         id: 1,
-        message: "Hello, how are you?",
+        message: "Hello, how are you i just wanted to tell you how much i liked you adn that i want to be a part of this streaming platform one day to support the community that gave itself to me?",
         sender: "Solomon",
         time: "12:00 PM"
     },
@@ -125,9 +125,9 @@ const messages = ref([
             <div class="head w-full h-10 flex p-2">
                 <h1 class="font-bold">Live Chat</h1>
             </div>
-            <div class="livemessages h-full smooth-wrapper">
-                <ScrollArea class="h-[400px] smooth-content">
-                    <div v-for="msg in messages" :key="msg.id" class="message flex flex-col gap-1 border border-border my-5 p-2">
+            <div class="livemessages h-full smooth-wrapper ">
+                <ScrollArea class="h-[400px] smooth-content pr-5">
+                    <div v-for="msg in messages" :key="msg.id" class="message flex flex-col gap-1 rounded-lg my-5 p-2">
                         <div class="sender h-8 flex place-items-center gap-2">
                             <Avatar class="w-6 h-6">
                                 <AvatarImage src="#" alt="@radix-vue" />
@@ -135,8 +135,8 @@ const messages = ref([
                                     PR
                                 </AvatarFallback>
                             </Avatar>
-                            <h1 class="font-bold">{{msg.sender}}</h1>
-                            <h2 class="text-[10px]">{{msg.time}}</h2>
+                            <h1 class="font-bold" style="font-family: 'Roboto';">{{msg.sender}}</h1>
+                            <h2 class="text-[10px]" style="font-family: 'Roboto';">{{msg.time}}</h2>
                         </div>
                         <div class="messagebody px-2 py-2">
                             <p>{{msg.message}}</p>

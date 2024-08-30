@@ -10,6 +10,7 @@ import {
 import { Button } from './ui/button';
 import blob from './blob.vue';
 import gsap from 'gsap';
+import { Vue3Spline } from 'vue3-spline'
 
 const easingOptions = ["power1.out", "power2.out", "power3.out", "power4.out"];
 const durationOptions = [0.4, 0.5, 0.8, 1];
@@ -39,13 +40,18 @@ const fade_to_right_after = (el) => {
 
 function splitText(el) {
   const text = el.innerText;
-  el.innerHTML = text.split('').map(char => `<span class="char">${char}</span>`).join('');
+  const isHighlightable = el.classList.contains('highlightable');
+  el.innerHTML = text.split('').map(char => {
+    const spanClass = isHighlightable ? 'char highlightable' : 'char';
+    return `<span class="${spanClass}">${char}</span>`;
+  }).join('');
 }
 </script>
 
 <template>
   <div class=" w-screen bg-[#d9d9d985] flex flex-col justify-center backdrop-blur-3xl z-10" style="height: calc(100vh );">
-    <div class="texts px-10 w-[1000px] mt-auto">
+    <div class="horst flex w-full h-[82%] place-items-center">
+      <div class="texts px-10 w-[1000px] mt-[50px]">
         <Transition appear @before-enter="fade_to_right_before" @enter="fade_to_right_after">
           <h2 class="font-bold text-lg fade_up_slower" style="font-family:'Roboto'">Get started with a Bonus</h2>
         </Transition>
@@ -66,7 +72,19 @@ function splitText(el) {
                 <IconArrowUpRight stroke={5} />
             </Button>
         </div>
+    
+      </div>
+      <div class="3d w-[30%] h-[95%] mt-[100px] mr-[150px]">
+        <Vue3Spline
+        class="w-full h-full"
+        :scene="{
+          url: 'https://prod.spline.design/bhCqgeFUcQ-tlMuv/scene.splinecode',
+        }"
+      />
+      </div>
+      
     </div>
+    
     <div class="socials h-20 w-80 px-10 mt-auto fade_up_slower">
         <TooltipProvider>
             <Tooltip>
@@ -134,20 +152,10 @@ function splitText(el) {
     .highlightable{
         background: rgb(255,156,227);
         background: linear-gradient(135deg, rgba(255,156,227,1) 11%, rgba(255,77,205,1) 47%, rgba(132,0,193,1) 95%);
+        color: transparent;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         display: inline-block;
         text-shadow: none !important;   
-    }
-    
-    @keyframes move-text {
-      0% {
-        transform: translatey(20px);
-        opacity: 0;
-      }
-      100%{
-        transform: translatey(0px);
-        opacity: 1;
-      }
     }
 </style>
