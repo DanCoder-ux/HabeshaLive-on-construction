@@ -69,7 +69,7 @@ function toggleterms(open = true){
 
 <template>
     <div class="z-10 rotate-90 flex h-10 place-items-center w-40 gap-1 ml-auto mt-auto mb-16">
-        <h1 class="filter-none shadow-none font-bold text-lg w-96 text-nowrap">Scroll down to explore</h1>
+        <h1 class="filter-none shadow-none font-bold text-lg w-96 text-nowrap font-['Onest']">Scroll down to explore</h1>
         <img src="../assets/scroll_to_left_mouse.svg" alt="" class="w-16">
     </div>
 </template>

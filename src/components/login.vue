@@ -78,10 +78,11 @@ function validateLoginForm(){
 </script>
 
 <template>
-  <div class=" p-10 w-screen h-screen bg-[#ffffff] flex flex-col justify-center mt-0 backdrop-blur-3xl absolute z-20" v-show="canLogin">
+  <div class=" p-10 w-screen h-screen bg-[#4b4b4b1a] flex flex-col justify-center mt-0 backdrop-blur-lg absolute z-20" v-show="canLogin">
     <div class="login w-full h-full bg-gray-100 rounded-2xl flex p-3 gap-3 shadow-2xl ">
-        <div id="sec1log" class="sec1 w-1/2 gradient-background rounded-2xl p-20 flex flex-col pt-10 pb-10 " style="transition: 0.7s ease-in-out">
-            <Button variant="primary" size="icon" @click="unLogin">
+        <div id="sec1log" class="sec1 w-1/2 gradient-background rounded-2xl" style="transition: 0.7s ease-in-out">
+            <div class="sec1-pattern w-full h-full p-20 flex flex-col pt-10 pb-10">
+              <Button variant="primary" size="icon" @click="unLogin">
                 <IconArrowLeft stroke={2} color="white"/>
             </Button>
             <h1 class="mt-5 text-white flex place-items-center text-[50px] font-[800]" style="font-family:'Roboto'; line-height: 50px;">Welcome To Habesha live</h1>
@@ -95,9 +96,10 @@ function validateLoginForm(){
             <div class="more mt-auto flex w-full [&>*]:cursor-pointer">
                 <h1 class="text-white ml-auto">Privacy Policy</h1>
             </div>
+            </div>
         </div>
-        <div class="sec2 w-1/2 h-full flex-col p-20 py-20 gap-6" >
-            <h1 class="text-[50px] font-[600]">Login</h1>
+        <div class="sec2 w-1/2 h-full flex-col p-20 py-20 gap-6 [&>Label]:font-['Onest']" >
+            <h1 class="text-[50px] font-[600] font-['Onest']">Login</h1>
             <Label>Phone Number</Label>
             <Input placeholder="phone" class="w-full h-12"/>
             <Label>Password</Label>
@@ -109,7 +111,7 @@ function validateLoginForm(){
                     <IconEye stroke={2} color="gray" class="w-8 h-8"/>
                 </Button>
             </div>
-            <div class="flex items-center space-x-2 mt-8">
+            <div class="flex items-center space-x-2 mt-3">
                 <Checkbox id="terms" />
                 <label
                   for="terms"
@@ -119,7 +121,7 @@ function validateLoginForm(){
                 </label>
               </div>
             <Button class="w-full h-12 gradient-background text-lg text-white mt-3 hover:text-white hover:shadow-xl transition-all" variant="outline" @click="validateLoginForm">Login</Button>
-            <h1 class="w-full text-center mt-3" style="font-family: 'Roboto';">Dont have an account <Span @click="register" class="text-[#e22abf] cursor-pointer">Get started</Span></h1>
+            <h1 class="w-full text-center mt-3" style="font-family: 'Onest';">Dont have an account <Span @click="register" class="text-[#e22abf] cursor-pointer underline">Get started</Span></h1>
         </div>
     </div>
   </div>
@@ -131,7 +133,14 @@ function validateLoginForm(){
   background-size: 120% 120%;
   animation: gradient-animation 6s ease infinite;
 }
-
+.sec1-pattern {
+  background-color: rgba(250, 145, 145, 0);
+opacity: 1;
+background-image:  linear-gradient(135deg, rgba(69, 78, 247, 0.23) 25%, transparent 25%), linear-gradient(225deg, rgba(69, 78, 247, 0.23) 25%, transparent 25%), linear-gradient(45deg, rgba(69, 78, 247, 0.23) 25%, transparent 25%), linear-gradient(315deg, rgba(69, 78, 247, 0.23) 25%, rgba(250, 145, 145, 0) 25%);
+background-position:  10px 0, 10px 0, 0 0, 0 0;
+background-size: 20px 20px;
+background-repeat: repeat;
+}
 @keyframes gradient-animation {
   0% {
     background-position: 0% 50%;

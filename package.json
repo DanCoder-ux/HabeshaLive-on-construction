@@ -23,6 +23,7 @@
     "vee-validate": "^4.13.2",
     "vue": "^3.4.29",
     "vue-emoji-picker": "^1.0.3",
+    "vue-recaptcha": "^3.0.0-alpha.2",
     "vue-smoothie": "^1.2.0",
     "vue3-spline": "^1.0.0",
     "zod": "^3.23.8"

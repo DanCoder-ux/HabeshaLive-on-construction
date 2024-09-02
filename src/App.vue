@@ -15,10 +15,13 @@ import LivePage from './components/LivePage.vue';
 import { livepage } from './components/state';
 import buycredit from './components/buycredit.vue';
 import habeshachat from './components/habeshachat.vue';
+import Aboutus from './components/Aboutus.vue';
+
 </script>
 
 <template>
   <Smoothie class="cont p-0" :Weight="0.10" id="smoothi">
+    <Aboutus />
     <habeshachat />
     <buycredit />
     <LivePage />

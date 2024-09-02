@@ -2,17 +2,35 @@
 import { IconCaretDown } from '@tabler/icons-vue';
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuItem, DropdownMenuContent } from './ui/dropdown-menu';
 import { Button } from './ui/button';
-import { canRegister, canLogin } from './state';
+import { canRegister, canLogin,showAboutUs } from './state';
 
 let navbar_Links = [
-    {name: 'Home', link: '/',id:"home"},
-    {name: 'Live', link: '/live',id:"live"},
-    {name: 'About Us', link: '/about',id:"about"},
+    {name: 'Home', action: toggleHomePage,id:"home"},
+    {name: 'Live', action: toggleLivePage ,id:"live"},
+    {name: 'About Us', action: toggleShowAboutUs ,id:"about"},
+    {name: 'Contact Us', action: toggleContactUs,id:"contact"},
 ]
 
+function toggleHomePage(){
+    console.log("Home");
+}
+function toggleLivePage(){
+    console.log("Live");
+}
+function toggleContactUs(){
+    console.log("Contact Us");
+}
 function register(){
     canRegister.value = !canRegister.value;
     if(canRegister.value){
+        document.getElementById("smoothi").style.overflowY = "hidden";
+    }else{
+        document.getElementById("smoothi").style.overflowY = "scroll";
+    }
+}
+function toggleShowAboutUs(){
+    showAboutUs.value = !showAboutUs.value;
+    if(showAboutUs.value){
         document.getElementById("smoothi").style.overflowY = "hidden";
     }else{
         document.getElementById("smoothi").style.overflowY = "scroll";
@@ -26,7 +44,7 @@ function register(){
         <img src="../assets/habeshaLiveicon.svg" alt="" class="w-10 h-10">
     </div>
     <div class="links ml-auto mr-5 bg-white flex h-10 place-items-center [&>a]:w-[90px] [&>a]:h-full py-1 [&>a]:place-items-center [&>a]:bg-white [&>a]:text-center gap-2 px-1 rounded [&>a]:rounded">
-        <a v-for="link in navbar_Links" :key="link.name" :href="link.link" :id="link.id" class=" text-[#1a1a1a] font-semibold hover:bg-[#d9d9d985] text-[15px] transition-all flex justify-center hover:w-[110px]" style="font-family:'Roboto'">            {{ link.name }}
+        <a v-for="link in navbar_Links" :key="link.name" @click="link.action" :href="link.link" :id="link.id" class=" cursor-pointer text-[#1a1a1a] font-semibold hover:bg-[#d9d9d985] text-[15px] transition-all flex justify-center hover:w-[110px]" style="font-family:'Roboto'">            {{ link.name }}
         </a>
         <a @click="register" id="getstarted" class=" cursor-pointer text-white hover:bg-[#d9d9d985] text-[13px] transition-all flex justify-center hover:w-[95px] font-bold w-[100px] getstarted">
             Get started

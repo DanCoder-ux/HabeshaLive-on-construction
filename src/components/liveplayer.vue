@@ -108,7 +108,7 @@ function sendMessage(msg) {
 <template>
     <div class="w-screen h-screen flex p-5 px-10 gap-5">
         <div class="player flex flex-col w-[60%] h-full">
-            <div class="video bg-white w-full h-[420px] rounded"></div>
+            <div class="video bg-white w-full h-[420px] rounded border border-border"></div>
             <div class="disc flex-col flex mt-2">
                 <div class="account h-12 w-full flex place-items-center gap-2">
                     <TooltipProvider>
@@ -150,12 +150,12 @@ function sendMessage(msg) {
                 </div>
             </div>
         </div>
-        <div class="livechat w-[480px] h-[540px] bg-white rounded flex flex-col p-5 ml-auto">
+        <div class="livechat w-[480px] h-[540px] bg-white rounded flex flex-col p-5 ml-auto border border-border">
             <div class="head w-full h-10 flex p-2">
                 <h1 class="font-bold text-[21px]" style="font-family: 'Onest', sans-serif;">Live Chat</h1>
             </div>
             <div class="livemessages h-full smooth-wrapper ">
-                <div ref="liveMessageScrollArea" class="h-[400px] smooth-content pr-5 overflow-y-scroll">
+                <div ref="liveMessageScrollArea" class="h-[400px] smooth-content pr-5 overflow-y-scroll scroll-m-3" style="scrollbar-width: 10px;">
                     <div v-for="msg in messages" :key="msg.id" class="message flex flex-col gap-1 rounded-lg my-5 p-2">
                         <div class="sender h-8 flex place-items-center gap-2">
                             <Avatar class="w-6 h-6">

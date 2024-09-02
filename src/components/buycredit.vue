@@ -5,6 +5,7 @@ import { buycredits } from './state';
 import knumpad from './knumpad.vue';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
+import { IconArrowsLeftRight } from '@tabler/icons-vue';
 
 let credittyped = ref("00");
 </script>
@@ -22,6 +23,9 @@ let credittyped = ref("00");
                         <p class="font-['Onest'] text-sm h-4 text-gray-500">Type if you want</p>
                         <Input variant="outline" class="w-full h-12 my-3" v-model="credittyped" type="text"></Input>
                     </div>
+                    <Button variant="ghost" size="icon" class="h-12 mt-auto mb-3">
+                        <IconArrowsLeftRight stroke={2} />
+                    </Button>
                     <div class="w-full">
                         <p class="font-['Onest'] text-sm h-4 text-gray-500">Converted to pts</p>
                         <Input  variant="outline" class="w-full h-12 my-3"></Input>

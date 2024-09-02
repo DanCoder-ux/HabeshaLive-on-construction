@@ -58,10 +58,12 @@ let livepeoplecards = ref([
         title: "Better with Calculus Than Your Teacher"
     }
 ])
+
+
 </script>
 
 <template>
-  <div class=" px-10 w-screen h-screen bg-[#d9d9d985] flex flex-col justify-center z-10 mt-0 backdrop-blur-3xl" style="height: calc(100vh - 60px);">
+  <div ref="livenow_section" class=" px-10 w-screen h-screen bg-[#d9d9d985] flex flex-col justify-center z-10 mt-0 backdrop-blur-3xl" style="height: calc(100vh - 60px);">
     <h1 class="text-2xl font-bold" style="font-family: 'Onest', sans-serif;">Scroll To Explore</h1>
     <img src="../assets/arrow_to_left_long.svg" alt="">
     <div class="content w-full h-80 flex">
@@ -104,5 +106,18 @@ let livepeoplecards = ref([
 .no-scrollbar {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+}
+.fadeup{
+    animation: fadeup 1s ease-in-out forwards;
+}
+@keyframes fadeup {
+    0%{
+        opacity: 0;
+        transform: translateY(1.2);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(1);
+    }
 }
 </style>
