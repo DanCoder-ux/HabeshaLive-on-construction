@@ -118,7 +118,7 @@ onUnmounted(() => {
 
 <template>
   <div
-    class="cicl w-10 h-10 bg-[#f911b783] absolute z-20 rounded-full pointer-events-none"
+    class="cicl w-10 h-10 border-solid border-[#f911b783] border-4 absolute z-20 rounded-full pointer-events-none"
     style="transform: translate(-50%, -50%);"
     id="follower"
     ref="follower"
