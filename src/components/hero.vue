@@ -54,7 +54,7 @@ function splitText(el) {
     <div class="horst flex w-full h-[82%] place-items-center">
       <div class="texts px-10 w-[1800px] mt-[100px]">
         <Transition appear @before-enter="fade_to_right_before" @enter="fade_to_right_after">
-          <h2 class="font-bold text-lg fade_up_slower" style="font-family:'Roboto'">Get started with a Bonus</h2>
+          <h2 class="font-bold text-lg fade_up_slower py-5" style="font-family:'Roboto'">Get started with a Bonus</h2>
         </Transition>
         <Transition appear @before-enter="fade_to_right_before" @enter="fade_to_right_after">
           <h1 class="text-[75px] font-[800] fade_up" style="font-family: 'Onest'; line-height: 70px;">
@@ -62,12 +62,12 @@ function splitText(el) {
           </h1>
         </Transition>
         <Transition appear @before-enter="fade_to_right_before" @enter="fade_to_right_after">
-          <h3 class="font-bold text-lg fade_up" style="font-family:'Roboto'">Our Goal is to</h3>
+          <h3 class="font-bold text-lg fade_up pt-5" style="font-family:'Roboto'">Our Goal is to</h3>
         </Transition>
         <Transition appear @before-enter="fade_to_right_before" @enter="fade_to_right_after">
           <h4 class="fade_up" style="font-family:'Roboto'">Expand to the unchartered territories in search of briliance </h4>
         </Transition>
-        <div class="btns h-16 flex place-items-center gap-1 fade_up">
+        <div class="btns h-16 flex place-items-center gap-1 fade_up pt-8">
             <Button id="trybtn" class="trybtn font-bold w-28 hover:w-32 transition-all">Try for free</Button>
             <Button class="go hover:rounded-xl transition-all" size="icon">
                 <IconArrowUpRight stroke={5} />
@@ -159,4 +159,5 @@ function splitText(el) {
         display: inline-block;
         text-shadow: none !important;   
     }
+    /* * { outline: 1px solid red } */
 </style>

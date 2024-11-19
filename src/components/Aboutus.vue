@@ -364,5 +364,5 @@ function closeAboutUs() {
   background-size: 120% 120%;
   animation: gradient-animation 6s ease infinite;
 }
-* { outline: 1px solid red; }
+/* * { outline: 1px solid red; } */
 </style>

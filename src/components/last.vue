@@ -50,7 +50,7 @@ const defaultValue = 'item-1'
           <h1>Terms of Service</h1>
           <div class="separator w-[2px] h-[70%] bg-white mx-5"></div>
           <h1>Privacy Policy</h1>
-          <h1 class="ml-auto">@2024.A.A</h1>
+          <h1 class="ml-auto">2024</h1>
         </div>
       </div>
     </div>

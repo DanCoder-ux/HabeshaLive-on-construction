@@ -46,4 +46,5 @@ import Aboutus from './components/Aboutus.vue';
   overflow-x: hidden !important;
   position: relative;
 }
+* { outline: 1px solid red; }
 </style>
