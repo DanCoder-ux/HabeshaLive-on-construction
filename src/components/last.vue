@@ -1,5 +1,5 @@
 <script setup>
-import { IconCaretDown , IconArrowUpRight } from '@tabler/icons-vue';
+import { IconCaretDown , IconArrowUp } from '@tabler/icons-vue';
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuItem, DropdownMenuContent } from './ui/dropdown-menu';
 import { Button } from './ui/button';
 import { ScrollArea, ScrollBar  } from '@/components/ui/scroll-area'
@@ -40,9 +40,6 @@ const defaultValue = 'item-1'
         
       </div>
       <div class="row2 flex h-20 w-full place-items-center flex-col mt-auto">
-        <div class="subrow1 w-full h-10 flex">
-          <h1 class="ml-auto text-sm text-white cursor-pointer">Back To Top</h1>
-        </div>
         <img src="../assets/line-long.svg" alt="">
         <div class="subrow2 w-full h-10 flex place-items-center [&>h1]:text-white">
           <h1>© all rights reserved</h1>
@@ -62,4 +59,5 @@ const defaultValue = 'item-1'
     background: rgb(255,135,221);
     background: linear-gradient(135deg, rgba(255,135,221,1) 5%, rgba(255,77,205,1) 47%, rgba(140,5,194,1) 89%, rgba(132,0,193,1) 95%);
   }
+  /* * { outline: 1px solid white } */
 </style>

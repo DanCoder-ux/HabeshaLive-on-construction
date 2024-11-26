@@ -1,26 +1,27 @@
 <script setup>
-import navbar from './components/navbar.vue';
-import hero from './components/hero.vue';
-import livenow from './components/livenow.vue';
+import navbar from "./components/navbar.vue";
+import hero from "./components/hero.vue";
+import livenow from "./components/livenow.vue";
 import { Smoothie } from "vue-smoothie";
-import { Weight } from 'lucide-vue-next';
-import Creditexp from './components/Creditexp.vue';
-import faq from './components/faq.vue';
-import last from './components/last.vue';
-import follower from './components/follower.vue';
-import Register from './components/Register.vue';
-import login from './components/login.vue';
-import scrolldownind from './components/scrolldownind.vue';
-import LivePage from './components/LivePage.vue';
-import { livepage } from './components/state';
-import buycredit from './components/buycredit.vue';
-import habeshachat from './components/habeshachat.vue';
-import Aboutus from './components/Aboutus.vue';
-
+import { Weight } from "lucide-vue-next";
+import Creditexp from "./components/Creditexp.vue";
+import faq from "./components/faq.vue";
+import last from "./components/last.vue";
+import follower from "./components/follower.vue";
+import Register from "./components/Register.vue";
+import login from "./components/login.vue";
+import scrolldownind from "./components/scrolldownind.vue";
+import LivePage from "./components/LivePage.vue";
+import { livepage } from "./components/state";
+import buycredit from "./components/buycredit.vue";
+import habeshachat from "./components/habeshachat.vue";
+import Aboutus from "./components/Aboutus.vue";
+import BackToTop from "./components/BackToTop.vue";
 </script>
 
 <template>
-  <Smoothie class="cont p-0" :Weight="0.10" id="smoothi">
+  <BackToTop class="fixed right-10 bottom-10" />
+  <Smoothie class="cont p-0" :Weight="0.1" id="smoothi">
     <Aboutus />
     <habeshachat />
     <buycredit />
@@ -35,7 +36,6 @@ import Aboutus from './components/Aboutus.vue';
     <faq />
     <last />
   </Smoothie>
-  
 </template>
 
 <style scoped>
@@ -46,5 +46,5 @@ import Aboutus from './components/Aboutus.vue';
   overflow-x: hidden !important;
   position: relative;
 }
-* { outline: 1px solid red; }
+/* * { outline: 1px solid red; } */
 </style>
