@@ -39,7 +39,7 @@ function toggleShowAboutUs(){
 </script>
 
 <template>
-  <div v-show="!canLogin || !canRegister" class=" absolute w-full bg-transparent flex place-items-center px-10 z-10 backdrop-blur-3xl" style="height: 60px;">
+  <div v-show="!canLogin || !canRegister" class=" absolute w-full bg-transparent flex place-items-center px-10 z-10 backdrop-blur-3xl" style="height: 60px;" id="top">
     <div class="logo">
         <img src="../assets/habeshaLiveicon.svg" alt="" class="w-10 h-10">
     </div>

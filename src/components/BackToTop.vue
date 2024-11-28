@@ -1,30 +1,50 @@
 <script setup>
 import { IconArrowUp } from "@tabler/icons-vue";
-import { onMounted, onUnmounted } from "vue"
+import { ref, onMounted, onUnmounted } from "vue";
 
-var showTopButton = true
+const showTopButton = ref(false);
+const container = document.querySelector(".cont");
 
-const scrollToTop = () => {
-    window.scrollTo({
-        top:0,
-        behavior:"smooth",
-    })
-}
+const handleScroll = () =>
+  (showTopButton.value = container ? container.scrollTop > 350 : null);
 
-// const handelScroll = () => showTopButton.value = window.scrollY > 300
+onMounted(() => {
+  if (container) {
+    container.addEventListener("scroll", handleScroll);
+  }
+});
 
-// onMounted(() => {
-//     window.addEventListener("scroll", handelScroll)
-// })
-
-// onUnmounted(() => {
-//     window.removeEventListener("scroll", handelScroll)
-// })
-
+onUnmounted(() => {
+  if (container) {
+    container.removeEventListener("scroll", handleScroll);
+  }
+});
 </script>
 
 <template>
-  <button v-show="showTopButton" @click="scrollToTop" class="outline-none border-none bg-pink-500 rounded-full z-20 h-12 w-12 px-2 py-2">
-    <IconArrowUp stroke="{2}" color="white"></IconArrowUp>
-  </button>
+  <transition name="fade">
+    <a
+      v-if="showTopButton"
+      href="#top"
+      class="bg-pink-500 rounded-full z-20 h-12 w-12 px-2 py-2 outline-none"
+    >
+      <IconArrowUp stroke-width="{1}" color="white" />
+    </a>
+  </transition>
 </template>
+
+<style>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.cont {
+  scroll-behavior: smooth;
+}
+</style>
