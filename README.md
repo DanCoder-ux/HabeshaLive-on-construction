@@ -1,8 +1,8 @@
 <h1 align="center"><img src="src/assets/habeshaLiveicon.svg"></h1>
 
-<h4 align="center" style="margin-block: 30px">HabeshaLive</h1>
+<h3 align="center" style="margin: 10px 0 30px 0">HabeshaLive</h1>
 
-## Project Setup
+### Project Setup
 
 ```sh
 npm install
