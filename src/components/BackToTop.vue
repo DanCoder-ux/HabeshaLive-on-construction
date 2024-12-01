@@ -5,14 +5,13 @@ import { ref, onMounted, onUnmounted } from "vue";
 const showTopButton = ref(false);
 const container = document.querySelector(".cont");
 
-const handleScroll = () =>
-  (showTopButton.value = container ? container.scrollTop > 350 : null);
+const handleScroll = () => container ? showTopButton.value = container.scrollTop > 350 : null
 
 onMounted(() => {
   if (container) {
-    container.addEventListener("scroll", handleScroll);
+    container.addEventListener("scroll", handleScroll)
   }
-});
+})
 
 onUnmounted(() => {
   if (container) {
