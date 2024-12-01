@@ -1,6 +1,6 @@
 <h1 align="center"><img src="src/assets/habeshaLiveicon.svg"></h1>
 
-<h2 align="center" style="margin-block: 30px">HabeshaLive</h1>
+<h4 align="center" style="margin-block: 30px">HabeshaLive</h1>
 
 ## Project Setup
 
