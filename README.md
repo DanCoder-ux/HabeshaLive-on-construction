@@ -1,4 +1,4 @@
-<center><img src="src/assets/habeshaLiveicon.svg"></center>
+<h1 align="center"><img src="src/assets/habeshaLiveicon.svg"></h1>
 
 <h1 align="center" style="margin-block: 30px">HabeshaLive</h1>
 
