@@ -1,6 +1,6 @@
-# vue-project
+<center><img src="src/assets/habeshaLiveicon.svg"></center>
 
-This template should help get you started developing with Vue 3 in Vite.
+<h1 align="center" style="margin-block: 30px">HabeshaLive</h1>
 
 ## Project Setup
 
@@ -8,14 +8,15 @@ This template should help get you started developing with Vue 3 in Vite.
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Development Server
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+### Compile for Production
 
 ```sh
 npm run build
 ```
+

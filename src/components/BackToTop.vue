@@ -15,7 +15,7 @@ onMounted(() => {
 
 onUnmounted(() => {
   if (container) {
-    container.removeEventListener("scroll", handleScroll);
+    container.removeEventListener("scroll", handleScroll)
   }
 });
 </script>
