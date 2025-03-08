@@ -14,7 +14,6 @@
     "@vueuse/core": "^11.0.3",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
-    "emoji-mart-vue": "^2.6.4",
     "gsap": "^3.12.5",
     "lucide-vue-next": "^0.436.0",
     "radix-vue": "^1.9.5",
